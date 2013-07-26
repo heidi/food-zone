@@ -6,7 +6,9 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
-gem 'jquery-rails'
+gem 'activeadmin'
+# because of http://stackoverflow.com/questions/16905633/cant-install-active-admin-for-ruby-on-rails-sprocketsfilenotfound
+gem 'jquery-rails', "2.3.0"
 gem 'bootstrap-sass'
 gem 'haml-rails'
 gem 'pg'
@@ -23,5 +25,5 @@ end
 group :test do
   gem 'database_cleaner'
   gem 'email_spec'
-  gem 'machinist'
+  gem 'factory_girl'
 end

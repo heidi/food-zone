@@ -17,7 +17,7 @@ module FoodZone
       
       g.test_framework :rspec, fixture: true
       
-      g.fixture_replacement :machinist
+      g.fixture_replacement :factory_girl
       
       g.view_specs false
       g.helper_specs false
