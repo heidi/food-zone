@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130726035318) do
+ActiveRecord::Schema.define(:version => 20130726202913) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -41,9 +41,21 @@ ActiveRecord::Schema.define(:version => 20130726035318) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+
+  create_table "costco_requests", :force => true do |t|
+    t.string   "consumable_type"
+    t.datetime "requested_at"
+    t.string   "requester"
+    t.string   "quantity"
+    t.string   "notes"
+    t.string   "item_name"
+    t.datetime "created_at"
+  end
 
 end
